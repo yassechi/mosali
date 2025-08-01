@@ -1,1 +1,82 @@
-<p>employees works!</p>
+<div class="employees">
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+        <th>Adresse</th>
+        <th>Salaire</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(employee of employeesTab; track employee.id){
+      <tr>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.address }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>
+          <button class="emp-btn" (click)="deleteEmployee(employee)">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 1024 1024"
+            >
+              <path
+                fill="currentColor"
+                d="M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32zm448-64v-64H416v64zM224 896h576V256H224zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32m192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32"
+              />
+            </svg>
+          </button>
+          <button class="emp-btn" (click)="editEmployee(employee)">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 1024 1024"
+            >
+              <path
+                fill="currentColor"
+                d="m199.04 672.64l193.984 112l224-387.968l-193.92-112l-224 388.032zm-23.872 60.16l32.896 148.288l144.896-45.696zM455.04 229.248l193.92 112l56.704-98.112l-193.984-112zM104.32 708.8l384-665.024l304.768 175.936L409.152 884.8h.064l-248.448 78.336zm384 254.272v-64h448v64z"
+              />
+            </svg>
+          </button>
+        </td>
+      </tr>
+      }
+
+      <!-- Les lignes des employés seront insérées ici -->
+    </tbody>
+  </table>
+
+  <!-- <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Salary</th>
+    </tr>
+    @for(employee of employees; track employee.id){
+    <tr>
+      <td>{{ employee.id  }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.phone }}</td>
+      <td>{{ employee.address }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>
+        <button (click)="deleteEmployee(employee)">Delete</button>
+                   <button (click)="editEmployee(employee)">Edit</button>
+      </td>
+    </tr>
+    }
+  </table> -->
+</div>

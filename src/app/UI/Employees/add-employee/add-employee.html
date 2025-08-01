@@ -1,0 +1,123 @@
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+  }
+
+  .is-invalid {
+    border-color: #dc3545;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+  }
+
+  .ml-2 {
+    margin-left: 8px;
+  }
+</style>
+
+<div class="container">
+  <h2 class="mt-4 mb-4">Ajouter un employé</h2>
+
+  <!-- <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()"> -->
+  <form>
+    <div class="form-group">
+      <label for="name">Nom</label>
+      <!-- <input type="text" id="name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"> -->
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        class="form-control"
+      />
+      <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+        <div *ngIf="f.name.errors.required">Le nom est requis</div>
+      </div> -->
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <!-- <input type="email" id="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"> -->
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="form-control"
+      />
+      <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">L'email est requis</div>
+        <div *ngIf="f.email.errors.email">L'email n'est pas valide</div>
+      </div> -->
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Téléphone</label>
+      <input
+        type="text"
+        id="phone"
+        formControlName="phone"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="address">Adresse</label>
+      <input
+        type="text"
+        id="address"
+        formControlName="address"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="salary">Salaire</label>
+      <!-- <input type="number" id="salary" formControlName="salary" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.salary.errors }"> -->
+      <input
+        type="number"
+        id="salary"
+        formControlName="salary"
+        class="form-control"
+      />
+      <!-- <div *ngIf="submitted && f.salary.errors" class="invalid-feedback">
+        <div *ngIf="f.salary.errors.required">Le salaire est requis</div>
+        <div *ngIf="f.salary.errors.min">Le salaire doit être un nombre positif</div>
+      </div> -->
+    </div>
+
+    <div class="form-group mt-3">
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+      <!-- <button type="button" class="btn btn-secondary ml-2" (click)="router.navigate(['/employees'])">Annuler</button> -->
+      <button type="button" class="btn btn-secondary ml-2">Annuler</button>
+    </div>
+  </form>
+</div>

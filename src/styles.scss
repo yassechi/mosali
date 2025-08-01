@@ -1,14 +1,163 @@
-/* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+//ALL
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #9b9393;
+  color: #504c4c;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #9b9393;
-    color: #504c4c;
+//// Home
+.home h1 {
+  color: black;
+  text-align: center;
+  margin: 50px;
+}
+.home p {
+  color: black;
+  text-align: center;
+  margin: 50px;
 }
 
+////// Login
+.log {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.log p {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.log p input {
+  width: 20%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.log button {
+  width: 100px;
+  height: 40px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+//// Employees
+
+.employee-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    // border-radius: 10px;
+}
+
+.employee-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 12px 15px;
+}
+
+.employee-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.employee-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.employee-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .employee-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .employee-table thead,
+    .employee-table tbody,
+    .employee-table th,
+    .employee-table td,
+    .employee-table tr {
+        display: block;
+    }
+    
+    .employee-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .employee-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    
+    .employee-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+    
+    .employee-table td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    
+    .employee-table td:nth-of-type(1):before { content: "ID"; }
+    .employee-table td:nth-of-type(2):before { content: "Nom"; }
+    .employee-table td:nth-of-type(3):before { content: "Email"; }
+    .employee-table td:nth-of-type(4):before { content: "Téléphone"; }
+    .employee-table td:nth-of-type(5):before { content: "Adresse"; }
+    .employee-table td:nth-of-type(6):before { content: "Salaire"; }
+}
+
+.emp-btn {
+  width: 50px;
+  margin-right: 5px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.emp-btn:hover {
+  background-color: #009879;
+  border: 1px solid #009879;
+  color: white;
+}

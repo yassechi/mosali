@@ -1,8 +1,27 @@
 import { Routes } from '@angular/router';
-import { Home } from './UI/home/home';
-import { Login } from './UI/login/login';
+
 
 export const routes: Routes = [
-    {path:'home',title:'Home', component: Home},
-    {path:'login',title:'Home', component: Login},
+  {
+    path: 'home',
+    title: 'about',
+    loadComponent: () => import('./UI/home/home'),
+  },
+  {
+    path: 'login',
+    title: 'login-sing',
+    loadComponent: () => import('./UI/login/login'),
+  },
+  {
+    path: 'employees',
+    title: 'mosali-emploees',
+    loadComponent: () =>
+      import('./UI/Employees/employees/employees'),
+  },
+  {
+    path: 'add-employee',
+    title: 'add-employee',
+    loadComponent: () =>
+      import('./UI/Employees/add-employee/add-employee'),
+  },
 ];

@@ -23,6 +23,8 @@ export class EmplyeeService {
     }
   ]);
 
+  isloged=signal(localStorage.getItem('isloged')?true:false);
+
   getEmployees(): EmployeeM[] {
     return this.employeesTab();
   }

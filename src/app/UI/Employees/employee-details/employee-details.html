@@ -1,0 +1,19 @@
+
+<div class="employee">
+@if(employee){
+<h3>Mr {{employee.name}}</h3>
+<p>{{ employee.id }}</p>
+<p>{{ employee.name }}</p>
+<p>{{ employee.email }}</p>
+<p>{{ employee.phone }}</p>
+<p>{{ employee.address }}</p>
+<p>{{ employee.salary }}</p>
+}
+</div>
+
+<div class="emp1-btn">
+<button (click)="modifierEmployee(3)">Modifier</button>
+<button (click)="retour()">Retour</button>
+</div>
+
+

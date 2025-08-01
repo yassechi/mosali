@@ -19,10 +19,10 @@ export default class Employees {
     this.srv.deleteEmployee(emp.id);
   }
 
-  editEmployee = (emp : EmployeeM) => {
+  employeeDetails = (id : number) => {
 
       // this.router.navigate(['add-employee', emp.id])
-      this.router.navigate(['add-employee'])
+      this.router.navigate(['employee-details/' + id])
   }
 
 

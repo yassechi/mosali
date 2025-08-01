@@ -1,0 +1,57 @@
+<style>
+    .error-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.error-template h1 {
+  font-size: 100px;
+  font-weight: bold;
+  color: #009879;
+}
+
+.error-template h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.error-details {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #666;
+}
+
+.error-actions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.error-actions .btn {
+  margin-right: 10px;
+}
+
+.error-actions .btn-primary {
+  background-color: #009879;
+  border-color: #009879;
+}
+
+.error-actions .btn-primary:hover {
+  background-color: #00785f;
+  border-color: #00785f;
+}
+
+</style>
+<div class="container text-center mt-5">
+  <div class="error-template">
+    <h1 class="display-1">404</h1>
+    <h2 class="mb-4">Page non trouvée</h2>
+    <div class="error-details mb-4">
+      Désolé, une erreur est survenue. La page demandée n'a pas été trouvée!
+    </div>
+    <div class="error-actions">
+      <a routerLink="home" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-home"></span> Retour à l'accueil
+      </a>
+    </div>
+  </div>
+</div>
